@@ -1,0 +1,11 @@
+<li>
+	{{name}}
+{{#unless hungry}}
+      
+	<button class="change-eaten" data-id="{{id}}" data-neweaten="{{eat}}">
+		{{#if eat}}EAT ME!{{else}}WAKE UP!{{/if}}
+	</button>
+    {{/unless}}
+	<button class="delete-burger" data-id="{{this.id}}"data-neweaten="{{eat}}">
+		{{#if eat}}Throw Away!{{else}}Remove from list.{{/if}}</button>
+</li>

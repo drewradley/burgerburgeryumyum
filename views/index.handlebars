@@ -1,0 +1,47 @@
+<h1>Burger! Burger! Yum! Yum!</h1>
+
+
+<div class="container">
+  <div class="row border-between">
+    <div class="col-md-6">
+      <h2>Burgers! Burgers! Burgers!</h2>
+      <ul>
+      {{#each burgers}}
+        {{#unless hungry}}
+        {{> burgers/burger-block eat=true}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    
+    <div class="col-md-6">
+     
+     <h2>Gone Burger.</h2>
+
+      <ul>
+        {{#each burgers}}
+          {{#if hungry}}
+            {{> burgers/burger-block eat=false}}
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+
+
+<hr>
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  
+
+  <button type="submit">Add Burger</button>
+</form>
